@@ -1,0 +1,279 @@
+:root {
+    --primary-color: #1f77b4;
+    --secondary-color: #ff7f0e;
+    --success-color: #2ca02c;
+    --danger-color: #d62728;
+    --neutral-color: #555;
+    --bg-color: #f5f5f5;
+    --card-bg: #ffffff;
+    --border-color: #ddd;
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.control-panel {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.input-group input,
+.filter-panel select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.input-group input:focus,
+.filter-panel select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(31, 119, 180, 0.1);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #1a5a96;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: #b81f1f;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.status {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #ffe0b2;
+    color: #e65100;
+    font-weight: 600;
+}
+
+.status.active {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.status.error {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+.filter-panel {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-panel input,
+.filter-panel select {
+    flex: 1;
+    max-width: 300px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.table-container {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table-container h2 {
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--primary-color);
+}
+
+.option-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.option-table thead {
+    background-color: #f0f0f0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.option-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.option-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.option-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.option-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.loading {
+    text-align: center;
+    color: var(--neutral-color);
+    font-style: italic;
+}
+
+.positive {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.negative {
+    color: var(--danger-color);
+    font-weight: 600;
+}
+
+.info-panel {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.info-panel h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.spot-price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.last-update {
+    color: var(--neutral-color);
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .control-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-group input,
+    .btn {
+        width: 100%;
+    }
+
+    .filter-panel {
+        flex-direction: column;
+    }
+
+    .filter-panel input,
+    .filter-panel select {
+        max-width: 100%;
+    }
+
+    .option-table {
+        font-size: 0.9em;
+    }
+
+    .option-table th,
+    .option-table td {
+        padding: 8px;
+    }
+}
